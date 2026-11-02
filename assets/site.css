@@ -1,0 +1,65 @@
+@font-face { font-family:"Jost"; src:url("fonts/Jost-Variable.ttf") format("truetype"); font-weight:100 900; font-display:swap; }
+:root { --space:#000; --menu:#252b63; --menu-line:#6a74c9; --text:#f4f6ff; --dim:#b3bbdd; --link:#8fb2ff; --gold:#f5d67b; }
+* { box-sizing:border-box; }
+html { background:var(--space); color-scheme:dark; }
+body { margin:0; background:var(--space); color:var(--text); font:400 18px/1.6 "Jost", -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
+img { display:block; max-width:100%; }
+a { color:var(--link); }
+:focus-visible { outline:2px solid var(--gold); outline-offset:3px; }
+.wrap { max-width:980px; margin:0 auto; padding:0 16px; }
+
+/* Links read like the game's title menu: the current line sits on the navy bar. */
+.menu { display:flex; flex-wrap:wrap; gap:4px; margin:0; padding:0; list-style:none; }
+.menu a { display:block; padding:4px 18px; border:1px solid transparent; border-radius:10px; color:var(--text); font-size:19px; text-decoration:none; }
+.menu a:hover, .menu a[aria-current] { background:var(--menu); border-color:var(--menu-line); }
+
+.bar { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:8px 24px; padding-top:20px; padding-bottom:12px; }
+.wordmark { color:var(--text); font-weight:300; font-size:24px; letter-spacing:.3em; text-decoration:none; }
+.bar .menu a { font-size:17px; padding:2px 14px; }
+
+.hero { position:relative; }
+.hero img { width:100%; height:auto; min-height:112px; object-fit:cover; -webkit-mask-image:linear-gradient(#000 80%, transparent); mask-image:linear-gradient(#000 80%, transparent); }
+
+.app { display:grid; grid-template-columns:auto 1fr; gap:24px; align-items:center; margin-top:8px; }
+.app .icon { width:148px; height:148px; border-radius:33px; border:1px solid #2b3056; }
+.app h1 { margin:0; font-weight:400; font-size:40px; line-height:1.1; }
+.app .subtitle { margin:2px 0 0; color:var(--dim); font-size:21px; }
+.status { display:inline-block; margin:12px 0 0; padding:3px 16px; background:var(--menu); border:1px solid var(--menu-line); border-radius:10px; }
+.terms { margin:8px 0 0; color:var(--dim); font-size:16px; }
+
+.gallery { display:flex; gap:14px; margin:40px 0 0; padding:0 max(16px, calc((100vw - 948px) / 2)) 14px; overflow-x:auto; scroll-snap-type:x proximity; scroll-padding:0 max(16px, calc((100vw - 948px) / 2)); }
+.gallery img { flex:none; width:auto; max-width:none; height:clamp(240px, 46vw, 460px); border-radius:18px; border:1px solid #23284d; scroll-snap-align:start; }
+
+.about { display:grid; grid-template-columns:minmax(0, 3fr) minmax(0, 2fr); gap:32px 56px; margin-top:40px; }
+.about h2, .info h2, .page h2 { margin:32px 0 6px; font-weight:500; font-size:23px; line-height:1.25; color:var(--gold); }
+.about > div > h2:first-child { margin-top:0; }
+.about p { margin:0 0 14px; max-width:62ch; }
+.about ul { margin:0; padding:0; list-style:none; }
+.about li { padding:7px 0; line-height:1.4; border-bottom:1px solid #1d2142; }
+.about li:last-child { border-bottom:0; }
+
+.info { margin-top:32px; }
+.info dl { display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:16px 32px; margin:12px 0 0; }
+.info dt { color:var(--dim); font-size:16px; }
+.info dd { margin:0; }
+
+.help { display:flex; flex-wrap:wrap; align-items:center; gap:4px 12px; margin-top:40px; }
+.help p { margin:0 10px 0 0; }
+.help .menu a { background:var(--menu); border-color:var(--menu-line); }
+.help .menu a:hover { background:#333b82; }
+footer { margin:40px 0 0; padding-bottom:40px; color:var(--dim); font-size:15px; }
+
+.page { max-width:720px; }
+.page h1 { margin:20px 0 8px; font-weight:400; font-size:36px; line-height:1.15; }
+.page p { max-width:68ch; }
+.page .date { color:var(--dim); font-size:16px; }
+
+@media (max-width:720px) {
+  body { font-size:17px; }
+  .app { gap:16px; }
+  .app .icon { width:96px; height:96px; border-radius:22px; }
+  .app h1 { font-size:30px; }
+  .app .subtitle { font-size:18px; }
+  .about { grid-template-columns:minmax(0, 1fr); }
+  .wordmark { font-size:20px; }
+}

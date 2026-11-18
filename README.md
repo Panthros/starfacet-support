@@ -7,5 +7,8 @@ The public Starfacet website, served by GitHub Pages from the `main` branch at h
 | [index.html](index.html) | https://starfacet.bryanletcher.com/ | Marketing URL |
 | [support.html](support.html) | https://starfacet.bryanletcher.com/support.html | App Store support URL |
 | [privacy.html](privacy.html) | https://starfacet.bryanletcher.com/privacy.html | App Store privacy policy URL |
+| [chess/index.html](chess/index.html) | https://starfacet.bryanletcher.com/chess/ | Starfacet Chess: Marketing URL |
+| [chess/support.html](chess/support.html) | https://starfacet.bryanletcher.com/chess/support.html | Starfacet Chess: App Store support URL |
+| [chess/privacy.html](chess/privacy.html) | https://starfacet.bryanletcher.com/chess/privacy.html | Starfacet Chess: App Store privacy policy URL |
 
-The art is resized from `art/showcase/` and `screenshots/` in starfacet-design. The app icon and the Jost font (SIL Open Font License, in `assets/fonts/`) come from starfacet-ios.
+The art is resized from `art/showcase/` and `screenshots/` in starfacet-design; Starfacet Chess's (in `chess/assets/`) from `assets/` in starfacet-chess-ios, and its pages share `assets/site.css` and the font. The app icon and the Jost font (SIL Open Font License, in `assets/fonts/`) come from starfacet-ios.
